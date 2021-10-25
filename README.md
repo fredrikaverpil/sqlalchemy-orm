@@ -1,5 +1,12 @@
 # sqlalchemy-orm
 
+## Quickstart
+
+* Run `docker-compose up`
+* Configure db through pgadmin (described under "Postgresql & PgAdmin powered by compose" further down below)
+
+...
+
 ## What's an ORM?
 
 SQLAlchemy is often used as an Object Relational Mapper (ORM) tool that translates Python classes to tables on relational databases and automatically converts function calls to SQL statements. SQLAlchemy provides a standard interface that allows developers to create database-agnostic code to communicate with a wide variety of database engines.
