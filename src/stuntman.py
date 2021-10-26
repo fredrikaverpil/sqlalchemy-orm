@@ -12,12 +12,12 @@ from base import Base
 
 
 class Stuntman(Base):
-    __tablename__ = 'stuntmen'
+    __tablename__ = "stuntmen"
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
     active = Column(Boolean)
-    actor_id = Column(Integer, ForeignKey('actors.id'))
+    actor_id = Column(Integer, ForeignKey("actors.id"))
     actor = relationship("Actor", backref=backref("stuntman", uselist=False))
 
     def __init__(self, name, active, actor):

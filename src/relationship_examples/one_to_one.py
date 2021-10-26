@@ -18,13 +18,15 @@ parameters and also covers other parameters not mentioned here.
 
 """
 
+
 class Person(Base):
-    __tablename__ = 'people'
+    __tablename__ = "people"
     id = Column(Integer, primary_key=True)
     mobile_phone = relationship("MobilePhone", uselist=False, back_populates="person")
 
+
 class MobilePhone(Base):
-    __tablename__ = 'mobile_phones'
+    __tablename__ = "mobile_phones"
     id = Column(Integer, primary_key=True)
-    person_id = Column(Integer, ForeignKey('people.id'))
+    person_id = Column(Integer, ForeignKey("people.id"))
     person = relationship("Person", back_populates="mobile_phone")

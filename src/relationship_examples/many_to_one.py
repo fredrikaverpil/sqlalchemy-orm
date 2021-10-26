@@ -11,12 +11,12 @@ we would map this relation as follows:
 
 
 class Tire(Base):
-    __tablename__ = 'tires'
+    __tablename__ = "tires"
     id = Column(Integer, primary_key=True)
-    car_id = Column(Integer, ForeignKey('cars.id'))
+    car_id = Column(Integer, ForeignKey("cars.id"))
     car = relationship("Car")
 
 
 class Car(Base):
-    __tablename__ = 'cars'
+    __tablename__ = "cars"
     id = Column(Integer, primary_key=True)

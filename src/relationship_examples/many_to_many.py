@@ -14,16 +14,20 @@ SQLAlchemy aware of the helper table, we passed it in the secondary
 parameter of the relationship function.
 """
 
-students_classes_association = Table('students_classes', Base.metadata,
-    Column('student_id', Integer, ForeignKey('students.id')),
-    Column('class_id', Integer, ForeignKey('classes.id'))
+students_classes_association = Table(
+    "students_classes",
+    Base.metadata,
+    Column("student_id", Integer, ForeignKey("students.id")),
+    Column("class_id", Integer, ForeignKey("classes.id")),
 )
 
+
 class Student(Base):
-    __tablename__ = 'students'
+    __tablename__ = "students"
     id = Column(Integer, primary_key=True)
     classes = relationship("Class", secondary=students_classes_association)
 
+
 class Class(Base):
-    __tablename__ = 'classes'
+    __tablename__ = "classes"
     id = Column(Integer, primary_key=True)
