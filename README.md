@@ -55,6 +55,17 @@ Mark Wahlberg has a house in Glendale
   * `delete-orphan`: Indicates that when a child object loses reference to a parent, it will get deleted.
   * `merge`: Indicates that merge() operations propagate from parent to children.
 * SQLAlchemy ORM [sessions](http://docs.sqlalchemy.org/en/rel_1_1/orm/session_basics.html) is used to maintain a list of objects affected by a business transaction and to coordinate the writing out of these changes
+* The Query API provides dozens of useful functions like `all()`. In the following list, we can see a brief explanation about the most important ones:
+  * `count()`: Returns the total number of rows of a query.
+  * `filter()`: Filters the query by applying a criteria.
+  * `delete()`: Removes from the database the rows matched by a query.
+  * `distinct()`: Applies a distinct statement to a query.
+  * `exists()`: Adds an exists operator to a subquery.
+  * `first()`: Returns the first row in a query.
+  * `get()`: Returns the row referenced by the primary key parameter passed as argument.
+  * `join()`: Creates a SQL join in a query.
+  * `limit()`: Limits the number of rows returned by a query.
+  * `order_by()`: Sets an order in the rows returned by a query.
 
 # Postgresql & PgAdmin powered by compose
 

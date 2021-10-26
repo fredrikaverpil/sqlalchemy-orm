@@ -15,7 +15,7 @@ def connect():
 
 def main(session):
     """Perform queries and print the result."""
-    # Query all movies.
+    # Query all movies, using the session factory
     movies = session.query(Movie).all()
 
     # Print movies' details
