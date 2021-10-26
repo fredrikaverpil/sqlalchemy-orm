@@ -1,4 +1,7 @@
-"""Base."""
+"""Base.
+
+This file contains the base class for all other classes.
+"""
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
